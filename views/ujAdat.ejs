@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adatok</title>
+</head>
+<body>
+  <form method="post">
+    Név: <br>
+    <input type="text" name="nev" value="<%= data.nev %>" required>  <br>
+    Számlázási cím: <br>
+    <input type="text" name="szamlazasi_cim" value="<%= data.szamlazasi_cim %>" required > <br>
+    Szállítási cím: <br>
+    <input type="text" name="szallitasi_cim" value="<%= data.szallitasi_cim %>" required> <br>
+    Kupon: <br>
+    <input type="text" name="kupon" value="<%= data.biztonsgi_kod %>" required > <br>
+    Bankkártya szám: <br>
+    <input type="text" name="bankartya_szam" value="<%= data.biztonsgi_kod %>" required> <br>
+    Lejárati dátum: <br>
+    <input type="text" name="lejarati_datum" value="<%= data.lejarati_datum %>" required > <br>
+    Biztonsági kód: <br>
+    <input type="text" name="biztonsgi_kod"  value="<%= data.biztonsgi_kod %>" required  > <br><br>
+    <input type="submit" value="Rendelés">
+  </form>
+
+
+
+  
+</body>
+</html>
