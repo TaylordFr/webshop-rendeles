@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adatok</title>
+</head>
+<body>
+  <form method="post">
+    <h2>Adatok:</h2>
+    Név: <br>
+    <input type="text" name="nev" value="<%= data.nev %>" required>  <br>
+    Számlázási cím: <br>
+    <input type="text" placeholder="Ország, Irányítószám..." name="szamlazasi_cim" value="<%= data.szamlazasi_cim %>" required > <br>
+    Szállítási cím: <br>
+    <input type="text" placeholder="Ország, Irányítószám..." name="szallitasi_cim" value="<%= data.szallitasi_cim %>" required> <br>
+    Kupon: <br>
+    <input type="text" placeholder="Opcionális, pl. PT-1255" name="kupon" value="<%= data.kupon %>"> <br>
+    
+    <h2>Fizetési eszköz:</h2>
+    Bankkártya szám: <br>
+    <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" name="bankkartya" value="<%= data.bankkartya %>" required> <br>
+    Lejárati dátum: <br>
+    <input type="text" placeholder="HH/ÉÉ" name="lejarati_datum" value="<%= data.lejarati_datum %>" required > <br>
+    Biztonsági kód: <br>
+    <input type="text" name="biztonsagi_kod"  value="<%= data.biztonsagi_kod %>" required  > <br><br>
+
+    <h3>Termék választás:</h3>
+
+    Választott:
+    <select name="termekek" id="termekek" required>
+      <option value="kave">kávé</option>
+      <option value="torta">torta</option>
+      <option value="szendvics">szendvics</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Rendelés">
+  </form>
+
+  <% for(let err of errors){ %> 
+    <p style="color: red"><%= err %></p>
+  <% } %>
+</body>
+</html>
